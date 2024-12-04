@@ -196,7 +196,8 @@
     <div class="row" id="quote">
   <div class="col-md-12">
     <h3 class="column-title">We'd love to hear from you</h3>
-    <form id="contact-form" method="POST">
+   
+    <form id="contact-form" action="https://formspree.io/f/xpwzbyzr" method="POST" role="form">
       <div class="error-container"></div>
       <div class="row">
         <div class="col-md-4">
@@ -229,47 +230,10 @@
     <div id="success-message" style="display:none; color: green; margin-top: 15px;">
       Your message has been sent successfully! Thank you for reaching out.
     </div>
-    <div id="error-message" style="display:none; color: red; margin-top: 15px;">
-      Something went wrong. Please try again later.
-    </div>
   </div>
 </div>
 
 <script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    const form = event.target;
-    const formData = new FormData(form);
-
-    // Make an AJAX request to send the email
-    fetch('send-email.php',
-    fetch('https://formspree.io/f/xgvedlgz', 
-
-    { // Replace with the correct PHP endpoint or Formspree URL
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        // Display success message
-        form.style.display = 'none';  // Hide the form
-        document.getElementById('success-message').style.display = 'block';
-      } else {
-        // Display error message
-        document.getElementById('error-message').style.display = 'block';
-      }
-    })
-    .catch(error => {
-      // Display error message in case of a failure in AJAX request
-      console.error('Error:', error);
-      document.getElementById('error-message').style.display = 'block';
-    });
-  });
-</script>
-
-
-<!-- <script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the default way
 
@@ -298,7 +262,7 @@
       alert("There was an error sending your message. Please try again.");
     });
   });
-</script> -->
+</script>
 
   </div>
 </section>
