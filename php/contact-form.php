@@ -6,7 +6,7 @@
 	$subject = trim($_POST['subject']);
 	$message = trim($_POST['message']);
 	
-	$emailTo = 'info.hydrosolutions@gmail.com'; //Put your own email address here
+	$emailTo = 'lefa.cloud@gmail.com'; //Put your own email address here
 	if (empty($subject)) {
 	    $subject = 'Message from your website.';
 	}
