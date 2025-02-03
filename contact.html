@@ -218,13 +218,10 @@
                 </div>
             </form>
 
-    <div id="success-message" style="display:none; color: green; margin-top: 15px;">
-      Your message has been sent successfully! Thank you for reaching out.
-    </div>
   </div>
 </div>
 
-<script>
+<!-- <script>
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting the default way
 
@@ -253,10 +250,17 @@
       alert("There was an error sending your message. Please try again.");
     });
   });
-</script>
+</script> -->
 
   </div>
 </section>
+
+<script>
+    function clearForm() {
+        // Reset the form fields after successful submission
+        document.getElementById('contact-form').reset();
+    }
+</script>
 
 
   <footer id="footer" class="footer bg-overlay">
